@@ -710,3 +710,52 @@ footer {
     }
 
 }
+
+
+/* Experience logos */
+.experience-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.experience-logo {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+.kemenkeu-logo {
+    width: 46px;
+    height: 44px;
+}
+
+.experience-heading h3 {
+    margin-top: 0;
+    margin-bottom: 6px;
+}
+
+.experience-heading h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+    .experience-heading {
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .experience-logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .kemenkeu-logo {
+        width: 42px;
+        height: 40px;
+    }
+}
