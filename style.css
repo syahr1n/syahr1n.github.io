@@ -759,3 +759,301 @@ footer {
         height: 40px;
     }
 }
+
+
+/* About layout and photo gallery */
+.about-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+    align-items: center;
+    gap: 55px;
+    margin-top: 25px;
+}
+
+.about-text {
+    max-width: 750px;
+}
+
+.about-gallery {
+    min-height: 360px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+}
+
+.about-photo {
+    overflow: hidden;
+    border-radius: 18px;
+    background: #e2e8f0;
+    box-shadow: 0 18px 38px rgba(15, 23, 42, 0.13);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.about-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-photo-main {
+    width: 58%;
+    height: 330px;
+    transform: translateY(-12px);
+}
+
+.about-photo-secondary {
+    width: 38%;
+    height: 245px;
+    transform: translateY(35px);
+}
+
+.about-photo:hover {
+    transform: translateY(-8px) scale(1.025);
+    box-shadow: 0 22px 45px rgba(15, 23, 42, 0.18);
+    z-index: 2;
+}
+
+/* Education logo */
+.education-institution {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.education-institution h4 {
+    margin: 0;
+}
+
+.education-logo {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    object-fit: contain;
+    padding: 3px;
+    background: white;
+    border-radius: 8px;
+}
+
+/* Experience photo galleries */
+.experience-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 22px;
+}
+
+.experience-photo {
+    overflow: hidden;
+    margin: 0;
+    border-radius: 12px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.experience-photo img {
+    display: block;
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.experience-photo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(15, 23, 42, 0.12);
+}
+
+.experience-photo:hover img {
+    transform: scale(1.04);
+}
+
+.experience-photo figcaption {
+    padding: 10px 12px;
+    color: #64748b;
+    font-size: 12px;
+}
+
+/* Certification / achievements */
+#certification {
+    background: white;
+}
+
+#certification .section-description {
+    max-width: 750px;
+}
+
+.certification-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 35px;
+}
+
+.certificate-card {
+    min-width: 0;
+    overflow: hidden;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.certificate-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(15, 23, 42, 0.10);
+}
+
+.certificate-image {
+    height: 220px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eef2f7;
+}
+
+.certificate-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+}
+
+.certificate-card:hover .certificate-image img {
+    transform: scale(1.035);
+}
+
+.certificate-card figcaption {
+    padding: 17px 18px 19px;
+}
+
+.certificate-card h3 {
+    color: #0f172a;
+    font-size: 16px;
+    line-height: 1.45;
+    margin-bottom: 5px;
+}
+
+.certificate-card p {
+    color: #64748b;
+    font-size: 13px;
+}
+
+.certificate-card small {
+    display: block;
+    margin-top: 7px;
+    color: #64748b;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+@media (max-width: 1000px) {
+    .about-layout {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .about-gallery {
+        max-width: 600px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .certification-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+    .about-gallery {
+        min-height: 290px;
+        gap: 10px;
+    }
+
+    .about-photo-main {
+        height: 270px;
+    }
+
+    .about-photo-secondary {
+        height: 205px;
+    }
+
+    .experience-gallery {
+        gap: 12px;
+    }
+
+    .experience-photo img {
+        height: 165px;
+    }
+
+    .certification-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .certificate-image {
+        height: 170px;
+        padding: 8px;
+    }
+
+    .certificate-card figcaption {
+        padding: 13px;
+    }
+
+    .certificate-card h3 {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-gallery {
+        min-height: 240px;
+    }
+
+    .about-photo-main {
+        height: 220px;
+    }
+
+    .about-photo-secondary {
+        height: 165px;
+    }
+
+    .experience-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-photo img {
+        height: 210px;
+    }
+
+    .certification-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .certificate-image {
+        height: 220px;
+    }
+
+    .education-logo {
+        width: 42px;
+        height: 42px;
+    }
+}
+
+/* Respect reduced-motion accessibility preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
